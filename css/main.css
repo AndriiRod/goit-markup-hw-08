@@ -1133,4 +1133,25 @@ img {
   .team__content {
     padding-bottom: 30px;
   }
+}
+@media screen and (min-width: 1200px) {
+  .clients {
+    margin-bottom: 50px;
+    font-size: 36px;
+    flex-wrap: nowrap;
+  }
+  .clients__item {
+    width: 170px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    min-height: 581px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .form-agreement__label {
+    font-size: 14px;
+  }
 }/*# sourceMappingURL=main.css.map */
