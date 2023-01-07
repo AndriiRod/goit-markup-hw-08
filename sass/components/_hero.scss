@@ -1,0 +1,36 @@
+.hero {
+  max-width: 480px;
+  height: 400px;
+  padding-top: 118px;
+  margin: 0 auto;
+
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/hero/header_smart_bg@1x.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: #c4c4c4;
+
+  &__title {
+    margin-bottom: 30px;
+
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 1.62;
+    letter-spacing: 0.06em;
+
+    text-align: center;
+    text-transform: uppercase;
+    color: $third-text-color;
+  }
+
+  &__btn {
+    min-width: 200px;
+    padding: 10px 24px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    @extend %btn;
+  }
+}
