@@ -3,10 +3,4 @@
   border: none;
   padding: 0;
   cursor: pointer;
-  &__icon-cross {
-    display: none;
-  }
-  &.is-open &__icon-menu {
-    display: none;
-  }
 }

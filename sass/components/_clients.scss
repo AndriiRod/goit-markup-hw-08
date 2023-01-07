@@ -1,0 +1,43 @@
+.clients {
+  &__title {
+    margin-bottom: 30px;
+    @extend %title;
+  }
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-basis: calc((100% - 30px) / 2);
+    gap: $gap-card;
+    @extend %list;
+  }
+  &__item {
+    width: 210px;
+    height: 92px;
+  }
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+    border: 1px solid $icon-color;
+    border-radius: 4px;
+    color: $icon-color;
+
+    transition: border-color $animation-speed-hover $animation-cubic-bezier,
+      color $animation-speed-hover $animation-cubic-bezier;
+
+    @extend %link;
+  }
+  &__icon {
+    fill: currentColor;
+  }
+  &__link:hover,
+  &__link:focus {
+    color: $accent-color;
+    border-color: $accent-color;
+  }
+}

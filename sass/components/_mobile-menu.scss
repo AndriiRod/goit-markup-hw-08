@@ -1,0 +1,97 @@
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  padding-left: 40px;
+
+  background-color: #ffffff;
+  &__btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+  }
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+  }
+  &__list {
+    @extend %list;
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+  }
+  &__item {
+  }
+  &__link {
+    @extend %link;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+
+    color: $main-text-color;
+  }
+  &__tel {
+    @extend %link;
+    display: inline-flex;
+
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+
+    margin-bottom: 32px;
+
+    color: $accent-color;
+  }
+  &__mail {
+    @extend %link;
+    display: inline-flex;
+
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+
+    margin-bottom: 64px;
+
+    color: $secondary-text-color;
+  }
+}
+.mobile-social {
+  @extend %list;
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+
+  &__item:not(:last-child)::after {
+    content: '';
+    display: inline-flex;
+    margin-left: 10px;
+    height: 22px;
+    width: 1px;
+    background-color: rgba(33, 33, 33, 0.2);
+  }
+
+  &__link {
+    @extend %link;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
+
+    color: $accent-color;
+  }
+}
