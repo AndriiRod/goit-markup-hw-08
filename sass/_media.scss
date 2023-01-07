@@ -7,6 +7,11 @@
     text-align: center;
   }
 }
+@media screen and (max-width: 1200px) {
+  .work {
+    display: none;
+  }
+}
 
 @include smart {
   .footer__input {
@@ -96,6 +101,73 @@
   .project {
     &__item {
       flex-basis: calc((100% - 30px) / 2);
+    }
+  }
+}
+
+@include desktop {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+
+  .header {
+    padding-top: 24px;
+    padding-bottom: 25px;
+    &__logo {
+      font-size: 26px;
+      margin-right: 93px;
+    }
+  }
+  .hero {
+    max-width: 1600px;
+    height: 600px;
+    padding-top: 200px;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/hero/header_desktop_bg@1x.jpg);
+    @include retina {
+      background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/hero/header_desktop_bg@2x.jpg);
+    }
+    &__title {
+      font-size: 44px;
+      line-height: 1.36;
+    }
+    &__btn {
+      min-width: 216px;
+      padding: 10px 32px;
+    }
+  }
+  .particular {
+    &__list {
+      display: flex;
+      flex-direction: row;
+      gap: $gap-card;
+      @extend %list;
+    }
+    &__item {
+      width: 270px;
+    }
+  }
+  .work {
+    &__title {
+      font-size: 36px;
+    }
+  }
+  .team {
+    &__title {
+      @extend %title;
+      margin-bottom: 50px;
+      font-size: 36px;
+    }
+    &__list {
+      display: flex;
+      flex-wrap: nowrap;
+      gap: $gap-card;
+      @extend %list;
+    }
+    &__content {
+      padding-bottom: 30px;
     }
   }
 }

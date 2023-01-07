@@ -392,7 +392,6 @@ img {
 }
 
 .work {
-  display: none;
   padding-bottom: 94px;
 }
 .work__title {
@@ -963,6 +962,11 @@ img {
     text-align: center;
   }
 }
+@media screen and (max-width: 1200px) {
+  .work {
+    display: none;
+  }
+}
 @media screen and (min-width: 480px) {
   .footer__input {
     width: 450px;
@@ -1062,5 +1066,71 @@ img {
 @media screen and (min-width: 768px) {
   .project__item {
     flex-basis: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+  .header {
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
+  .header__logo {
+    font-size: 26px;
+    margin-right: 93px;
+  }
+  .hero {
+    max-width: 1600px;
+    height: 600px;
+    padding-top: 200px;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/header_desktop_bg@1x.jpg);
+  }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/header_desktop_bg@2x.jpg);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero__title {
+    font-size: 44px;
+    line-height: 1.36;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero__btn {
+    min-width: 216px;
+    padding: 10px 32px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .particular__list {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+  }
+  .particular__item {
+    width: 270px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .work__title {
+    font-size: 36px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team__title {
+    margin-bottom: 50px;
+    font-size: 36px;
+  }
+  .team__list {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 30px;
+  }
+  .team__content {
+    padding-bottom: 30px;
   }
 }/*# sourceMappingURL=main.css.map */
