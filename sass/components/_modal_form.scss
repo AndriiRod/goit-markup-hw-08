@@ -1,0 +1,126 @@
+.form {
+  &__field {
+    position: relative;
+    display: block;
+
+    margin-bottom: 28px;
+  }
+  &__input {
+    width: 100%;
+    height: 40px;
+    padding-left: 42px;
+
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+
+    transition: border-color $animation-speed-hover $animation-cubic-bezier;
+  }
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+
+    transition: fill $animation-speed-hover $animation-cubic-bezier;
+  }
+  &__label {
+    position: absolute;
+    top: 50%;
+    left: 42px;
+    transform: translateY(-50%);
+
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color: $secondary-text-color;
+    animation: label-anim-down 1200ms $animation-cubic-bezier;
+  }
+  &__field:hover,
+  &__input:hover {
+    cursor: pointer;
+  }
+  &__field:focus-within > &__icon {
+    fill: $accent-color;
+  }
+  &__field:focus-within > .form__input {
+    outline: transparent;
+    border-color: $accent-color;
+  }
+  &__field:focus-within > &__label,
+  &__input:not(:placeholder-shown) ~ &__label {
+    animation: label-anim-up 1200ms $animation-cubic-bezier forwards;
+  }
+}
+
+@keyframes label-anim-up {
+  60% {
+    transform: translateY(-38px);
+  }
+  100% {
+    transform: translateY(-38px) translateX(-42px);
+  }
+}
+@keyframes label-anim-down {
+  0% {
+    transform: translateY(-38px) translateX(-42px);
+  }
+  60% {
+    transform: translateY(-38px);
+  }
+}
+.form-area {
+  position: relative;
+  display: block;
+  margin-bottom: 20px;
+  &__label {
+    display: block;
+    position: absolute;
+    left: 0;
+    transform: translateY(-18px);
+
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color: $secondary-text-color;
+  }
+  &__text {
+    width: 100%;
+    height: 120px;
+    padding: 12px 16px;
+
+    resize: none;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+
+    transition: border-color $animation-speed-hover $animation-cubic-bezier;
+  }
+  &__text::placeholder {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+
+    color: rgba(117, 117, 117, 0.5);
+  }
+  &:focus-within > &__text {
+    outline: transparent;
+    border-color: $accent-color;
+  }
+  &__label:hover,
+  &__text:hover {
+    cursor: pointer;
+  }
+}
+.form__btn {
+  min-width: 200px;
+  padding: 10px 52px;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  transition: background-color $animation-speed-hover $animation-cubic-bezier;
+  @extend %btn;
+  &:hover,
+  &:focus {
+    background-color: #188ce8;
+  }
+}

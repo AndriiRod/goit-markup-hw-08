@@ -1,0 +1,89 @@
+@media screen and (max-width: 768px) {
+  .contact,
+  .menu {
+    display: none;
+  }
+}
+
+@include smart {
+  .footer__input {
+    width: 450px;
+  }
+}
+
+@include tab {
+  .header__wrap-bar {
+    > .menu-btn {
+      display: none;
+    }
+    width: 136px;
+  }
+  .header__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .menu {
+    display: flex;
+    gap: 50px;
+    &__list {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 283px;
+    }
+  }
+  .contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 200px;
+  }
+  .particular {
+    &__list {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+    &__item {
+      max-width: 354px;
+    }
+  }
+  .team {
+    &__list {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+    &__item {
+      max-width: 354px;
+    }
+  }
+  .footer {
+    > .container {
+      text-align: center;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    &__wrapp:last-child {
+      margin: 0 auto;
+    }
+    &__form {
+      max-width: 450px;
+    }
+    &__input {
+      min-width: 450px;
+    }
+  }
+  .filter {
+    width: 100%;
+    justify-content: center;
+    column-gap: 8px;
+  }
+  .project {
+    &__item {
+      flex-basis: calc((100% - 30px) / 2);
+    }
+  }
+}

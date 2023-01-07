@@ -1,0 +1,52 @@
+.form-agreement {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 30px;
+
+  cursor: pointer;
+  &__check {
+    appearance: none;
+  }
+  &__area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 16px;
+    height: 15px;
+    margin-right: 7px;
+
+    border-radius: 2px;
+    border: 2px solid #212121;
+    transition: border-color $animation-speed-hover $animation-cubic-bezier,
+      background-color $animation-speed-hover $animation-cubic-bezier;
+  }
+  &:focus-within > &__area {
+    box-shadow: 0px 0px 0px 1px $accent-color;
+  }
+
+  &__label {
+    font-size: 12px;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+
+    color: $secondary-text-color;
+    & > a {
+      color: $accent-color;
+    }
+  }
+  &__icon {
+    fill: transparent;
+
+    transition: fill $animation-speed-hover $animation-cubic-bezier;
+  }
+  &__check:checked + &__area > &__icon {
+    fill: #ffffff;
+  }
+  &__check:checked + &__area {
+    border-color: $accent-color;
+    background-color: $accent-color;
+  }
+}

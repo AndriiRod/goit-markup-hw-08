@@ -1,0 +1,44 @@
+.filter {
+  width: 326px;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  row-gap: 15px;
+  margin-bottom: 50px;
+  @extend %list;
+  &__label {
+    cursor: pointer;
+  }
+  &__input {
+    appearance: none;
+  }
+  &__custom-input {
+    display: inline-flex;
+
+    padding: 6px 22px;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    color: $main-text-color;
+    background: #f5f4fa;
+    border-radius: 4px;
+
+    transition: color $animation-speed-hover $animation-cubic-bezier,
+      background-color $animation-speed-hover $animation-cubic-bezier,
+      box-shadow $animation-speed-hover $animation-cubic-bezier;
+  }
+  &__label:hover &__custom-input,
+  &__label:focus-within &__custom-input {
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+  &__input:checked + &__custom-input {
+    background-color: $accent-color;
+    color: $btn-text-color;
+  }
+}

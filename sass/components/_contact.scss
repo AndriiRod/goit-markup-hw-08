@@ -1,0 +1,30 @@
+.contact {
+  display: flex;
+  column-gap: 30px;
+  margin-left: auto;
+  @extend %list;
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: $secondary-text-color;
+
+    transition: color $animation-speed-hover $animation-cubic-bezier;
+    @extend %link;
+  }
+  &__icon {
+    fill: currentColor;
+  }
+  &__link:hover,
+  &__link:focus {
+    color: $accent-color;
+  }
+}
