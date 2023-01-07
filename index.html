@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>goit-markup-hw-07</title>
+    <title>goit-markup-hw-08</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -77,7 +77,7 @@
         </h1>
         <button class="hero__btn" type="button" data-modal-open>Замовити послугу</button>
       </section>
-      <!-- <section class="particular section">
+      <section class="particular section">
         <div class="container">
           <h2 class="particular__title">Особливості</h2>
           <ul class="particular__list">
@@ -128,7 +128,7 @@
           </ul>
         </div>
       </section>
-      <section class="work">
+      <!-- <section class="work">
         <div class="container">
           <h2 class="work__title" data-aos="fade-up" data-aos-duration="500">Чим ми займаємося</h2>
           <ul class="work__list">
@@ -156,16 +156,20 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
       <section class="team section">
         <div class="container">
           <h2 class="team__title" data-aos="fade-up" data-aos-duration="500">Наша команда</h2>
           <ul class="team__list">
             <li class="team__item">
               <img
-                src="./images/team/person1.jpg"
-                width="270"
-                height="260"
+                srcset="
+                  ./images/team/smart/team_smart_1@1x.jpg 1x,
+                  ./images/team/smart/team_smart_1@1x.jpg 2x
+                "
+                src="./images/team/smart/team_smart_1@1x.jpg"
+                width="450"
+                height="460"
                 alt="Фотографія Ігор Дем'яненко"
               />
               <div class="team__content">
@@ -205,9 +209,13 @@
             </li>
             <li class="team__item">
               <img
-                src="./images/team/person2.jpg"
-                width="270"
-                height="260"
+                srcset="
+                  ./images/team/smart/team_smart_2@1x.jpg 1x,
+                  ./images/team/smart/team_smart_2@1x.jpg 2x
+                "
+                src="./images/team/smart/team_smart_2@1x.jpg"
+                width="450"
+                height="460"
                 alt="Фотографія Ольга Рєпіна"
               />
               <div class="team__content">
@@ -247,9 +255,13 @@
             </li>
             <li class="team__item">
               <img
-                src="./images/team/person3.jpg"
-                width="270"
-                height="260"
+                srcset="
+                  ./images/team/smart/team_smart_3@1x.jpg 1x,
+                  ./images/team/smart/team_smart_3@1x.jpg 2x
+                "
+                src="./images/team/smart/team_smart_3@1x.jpg"
+                width="450"
+                height="460"
                 alt="Фотографія Микола Тарасов"
               />
               <div class="team__content">
@@ -289,9 +301,13 @@
             </li>
             <li class="team__item">
               <img
-                src="./images/team/person4.jpg"
-                width="270"
-                height="260"
+                srcset="
+                  ./images/team/smart/team_smart_4@1x.jpg 1x,
+                  ./images/team/smart/team_smart_4@1x.jpg 2x
+                "
+                src="./images/team/smart/team_smart_4@1x.jpg"
+                width="450"
+                height="460"
                 alt="Фотографія Михайло Єрмаков"
               />
               <div class="team__content">
@@ -332,7 +348,7 @@
           </ul>
         </div>
       </section>
-      <section class="clients section">
+      <!-- <section class="clients section">
         <h2 class="clients__title" data-aos="fade-up" data-aos-duration="500">Постійні клієнти</h2>
         <ul class="clients__list">
           <li class="clients__item">

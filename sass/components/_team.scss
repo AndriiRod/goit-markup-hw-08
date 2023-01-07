@@ -1,0 +1,56 @@
+.team {
+  background-color: #f5f4fa;
+  &__title {
+    margin-bottom: 30px;
+    @extend %title;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: $gap-card;
+    @extend %list;
+  }
+  &__item {
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+  }
+  &__content {
+    padding-top: 30px;
+    padding-bottom: 24px;
+
+    text-align: center;
+    background-color: #ffffff;
+  }
+  &__subtitle {
+    margin-bottom: 10px;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.18;
+    letter-spacing: 0.03em;
+    color: $main-text-color;
+  }
+  &__text {
+    margin-bottom: 16px;
+
+    font-size: 16px;
+    line-height: 1.18;
+    letter-spacing: 0.03em;
+    color: $secondary-text-color;
+  }
+}
+.team__social-list__link {
+  color: $icon-color;
+
+  transition: background-color $animation-speed-hover $animation-cubic-bezier,
+    color $animation-speed-hover $animation-cubic-bezier;
+  &:hover,
+  &:focus {
+    color: $hover-icon-color;
+    background-color: $accent-color;
+  }
+}
+.team__social-list__icon {
+  fill: currentColor;
+}
