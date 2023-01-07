@@ -3,6 +3,9 @@
   .menu {
     display: none;
   }
+  .particular__subtitle {
+    text-align: center;
+  }
 }
 
 @include smart {
@@ -12,6 +15,15 @@
 }
 
 @include tab {
+  .hero {
+    max-width: 768px;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/hero/header_tab_bg@1x.jpg);
+    @include retina {
+      background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/hero/header_tab_bg@2x.jpg);
+    }
+  }
   .header__wrap-bar {
     > .menu-btn {
       display: none;

@@ -381,7 +381,6 @@ img {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
-  text-align: center;
   text-transform: uppercase;
   color: #212121;
 }
@@ -960,10 +959,24 @@ img {
 .menu {
     display: none;
   }
+  .particular__subtitle {
+    text-align: center;
+  }
 }
 @media screen and (min-width: 480px) {
   .footer__input {
     width: 450px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero {
+    max-width: 768px;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/header_tab_bg@1x.jpg);
+  }
+}
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/header_tab_bg@2x.jpg);
   }
 }
 @media screen and (min-width: 768px) {
@@ -973,11 +986,15 @@ img {
   .header__wrap-bar > .menu-btn {
     display: none;
   }
+}
+@media screen and (min-width: 768px) {
   .header__wrap {
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
+}
+@media screen and (min-width: 768px) {
   .menu {
     display: flex;
     gap: 50px;
@@ -988,12 +1005,16 @@ img {
     align-items: center;
     width: 283px;
   }
+}
+@media screen and (min-width: 768px) {
   .contact {
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 200px;
   }
+}
+@media screen and (min-width: 768px) {
   .particular__list {
     flex-direction: row;
     flex-wrap: wrap;
@@ -1002,6 +1023,8 @@ img {
   .particular__item {
     max-width: 354px;
   }
+}
+@media screen and (min-width: 768px) {
   .team__list {
     flex-direction: row;
     flex-wrap: wrap;
@@ -1010,6 +1033,8 @@ img {
   .team__item {
     max-width: 354px;
   }
+}
+@media screen and (min-width: 768px) {
   .footer > .container {
     text-align: center;
     display: flex;
@@ -1025,12 +1050,16 @@ img {
   .footer__input {
     min-width: 450px;
   }
+}
+@media screen and (min-width: 768px) {
   .filter {
     width: 100%;
     justify-content: center;
     -moz-column-gap: 8px;
          column-gap: 8px;
   }
+}
+@media screen and (min-width: 768px) {
   .project__item {
     flex-basis: calc((100% - 30px) / 2);
   }
