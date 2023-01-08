@@ -1,6 +1,6 @@
 (() => {
   const mobileMenu = document.querySelector('.mobile-menu');
-  const openMenuBtn = document.querySelector('.menu-btn');
+  const openMenuBtn = document.querySelector('.header__btn');
   const closeMenuBtn = document.querySelector('.mobile-menu__btn');
 
   const toggleMenu = () => {
@@ -22,19 +22,4 @@
     openMenuBtn.setAttribute('aria-expanded', false);
     bodyScrollLock.enableBodyScroll(document.body);
   });
-  // const refs = {
-  //   openModalBtn: document.querySelector('[data-modal-open]'),
-  //   closeModalBtn: document.querySelector('[data-modal-close]'),
-  //   modal: document.querySelector('[data-modal]'),
-  // };
-
-  // refs.openModalBtn.addEventListener('click', toggleModal);
-  // refs.closeModalBtn.addEventListener('click', toggleModal);
-
-  // const isOpen = !refs.modal.classList.contains('is-hidden');
-  // const scrollLockMethod = !isOpen ? 'disableBodyScroll' : 'enableBodyScroll';
-  // function toggleModal() {
-  //   bodyScrollLock[scrollLockMethod](document.body);
-  //   refs.modal.classList.toggle('is-hidden');
-  // }
 })();

@@ -1,6 +1,13 @@
 .menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   &__list {
     @extend %list;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
   }
   &__link {
     position: relative;
@@ -27,7 +34,7 @@
 
   display: block;
   position: absolute;
-  bottom: -26.1px;
+  bottom: -34.1px;
   left: 0;
   width: 100%;
   height: 4px;

@@ -1,21 +1,31 @@
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .contact,
-  .menu {
+  .menu__list {
     display: none;
   }
   .particular__subtitle {
     text-align: center;
   }
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
   .work {
     display: none;
+  }
+  .contact {
+    margin-top: 20px;
+    margin-bottom: 19px;
+    &__item:not(:last-child) {
+      margin-bottom: 10px;
+    }
   }
 }
 
 @include smart {
   .footer__input {
     width: 450px;
+  }
+  .footer__social {
+    margin-bottom: 60px;
   }
 }
 
@@ -29,33 +39,16 @@
         url(../images/hero/header_tab_bg@2x.jpg);
     }
   }
-  .header__wrap-bar {
-    > .menu-btn {
+
+  .header {
+    &__btn {
       display: none;
     }
-    width: 136px;
-  }
-  .header__wrap {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .menu {
-    display: flex;
-    gap: 50px;
-    &__list {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 283px;
+    &__logo {
+      margin-right: 88px;
     }
   }
-  .contact {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 200px;
-  }
+
   .particular {
     &__list {
       flex-direction: row;
@@ -83,12 +76,7 @@
       flex-wrap: wrap;
       justify-content: space-between;
     }
-    &__wrapp:last-child {
-      margin: 0 auto;
-    }
-    &__form {
-      max-width: 450px;
-    }
+
     &__input {
       min-width: 450px;
     }
@@ -105,6 +93,12 @@
   }
 }
 
+@media screen and (max-width: 1199px) {
+  .footer__wrapp {
+    margin: 0 auto;
+  }
+}
+
 @include desktop {
   .section {
     padding-top: 94px;
@@ -118,7 +112,12 @@
       font-size: 26px;
       margin-right: 93px;
     }
+    .contact {
+      display: flex;
+      gap: 30px;
+    }
   }
+
   .hero {
     max-width: 1600px;
     height: 600px;
@@ -185,6 +184,38 @@
   .form-agreement {
     &__label {
       font-size: 14px;
+    }
+  }
+  .footer {
+    > .container {
+      display: flex;
+      column-gap: 93px;
+      text-align: start;
+    }
+    &__logo {
+      font-size: 26px;
+    }
+    &__wrapp {
+      margin: 12px 0 0 0;
+    }
+    &__social {
+      margin-top: 12px;
+    }
+    &__form {
+      display: flex;
+      column-gap: 12px;
+      flex-wrap: nowrap;
+    }
+    &__input {
+      width: 358px;
+      margin: 0;
+      padding: 15px 16px;
+    }
+    &__contact {
+      margin-bottom: 0;
+    }
+    &__input {
+      min-width: 358px;
     }
   }
 }

@@ -1,9 +1,4 @@
 .footer {
-  &__form {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
   &__input {
     width: 95vw;
 
@@ -23,6 +18,8 @@
   }
   &__btn {
     gap: 10px;
+
+    margin: 0 auto;
 
     min-width: 200px;
     padding: 10px 28px;
