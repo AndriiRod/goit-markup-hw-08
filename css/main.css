@@ -962,6 +962,9 @@ img {
   .particular__subtitle {
     text-align: center;
   }
+  .footer__social {
+    margin-bottom: 60px;
+  }
 }
 @media screen and (max-width: 1199px) {
   .work {
@@ -978,9 +981,6 @@ img {
 @media screen and (min-width: 480px) {
   .footer__input {
     width: 450px;
-  }
-  .footer__social {
-    margin-bottom: 60px;
   }
 }
 @media screen and (min-width: 768px) {
