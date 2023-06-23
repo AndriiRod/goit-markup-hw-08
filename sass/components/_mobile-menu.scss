@@ -1,5 +1,4 @@
 .mobile-menu {
-  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -10,6 +9,9 @@
   padding-left: 40px;
 
   background-color: #ffffff;
+
+  transition: transform $animation-speed-modal $animation-cubic-bezier;
+  transform: translateX(100%);
 
   &__btn {
     position: absolute;
@@ -117,6 +119,6 @@
   }
 }
 
-.is-open {
-  display: block;
+body.mobile-menu__show .mobile-menu {
+  transform: translateX(0);
 }

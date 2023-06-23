@@ -16,12 +16,6 @@
   color: #212121;
 }
 
-.is-hidden {
-  opacity: 0;
-  pointer-events: none;
-  visibility: hidden;
-}
-
 .project__title, .particular__title {
   position: absolute;
   width: 1px;
@@ -170,18 +164,8 @@ img {
   height: 4px;
   background-color: #2196f3;
   border-radius: 2px;
-  -webkit-animation: underline 800ms cubic-bezier(0.4, 0, 0.2, 1);
-          animation: underline 800ms cubic-bezier(0.4, 0, 0.2, 1);
+  animation: underline 800ms cubic-bezier(0.4, 0, 0.2, 1);
   transform-origin: left;
-}
-
-@-webkit-keyframes underline {
-  0% {
-    transform: scaleX(0);
-  }
-  100% {
-    transform: scaleX(1);
-  }
 }
 
 @keyframes underline {
@@ -224,7 +208,6 @@ img {
 }
 
 .mobile-menu {
-  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -234,6 +217,8 @@ img {
   padding-bottom: 48px;
   padding-left: 40px;
   background-color: #ffffff;
+  transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateX(100%);
 }
 .mobile-menu__btn {
   position: absolute;
@@ -314,8 +299,8 @@ img {
   color: #2196f3;
 }
 
-.is-open {
-  display: block;
+body.mobile-menu__show .mobile-menu {
+  transform: translateX(0);
 }
 
 .header {
@@ -580,12 +565,6 @@ img {
   letter-spacing: 0.03em;
   color: currentColor;
 }
-.footer__input:-ms-input-placeholder {
-  font-size: 16px;
-  line-height: 1.25;
-  letter-spacing: 0.03em;
-  color: currentColor;
-}
 .footer__input::placeholder {
   font-size: 16px;
   line-height: 1.25;
@@ -611,15 +590,24 @@ img {
   background: rgba(0, 0, 0, 0.3);
   overflow-y: scroll;
   transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1), visibility 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+body.show-modal .backdrop {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
 
 .modal {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scaleY(1);
-  width: 450px;
-  min-height: 609px;
+  transform: translate(-50%, -50%) scaleY(0.1);
+  width: calc(100% - 30px);
+  max-width: 450px;
   padding: 40px;
   background-color: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -632,10 +620,6 @@ img {
   line-height: 1.15;
   letter-spacing: 0.03em;
   text-align: center;
-}
-
-.backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scaleY(0);
 }
 
 .modal__btn {
@@ -659,6 +643,10 @@ img {
 }
 .modal__icon {
   fill: currentColor;
+}
+
+body.show-modal .modal {
+  transform: translate(-50%, -50%) scaleY(1);
 }
 
 .form__field {
@@ -690,8 +678,7 @@ img {
   line-height: 1.17;
   letter-spacing: 0.01em;
   color: #757575;
-  -webkit-animation: label-anim-down 1200ms cubic-bezier(0.4, 0, 0.2, 1);
-          animation: label-anim-down 1200ms cubic-bezier(0.4, 0, 0.2, 1);
+  animation: label-anim-down 1200ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form__field:hover, .form__input:hover {
   cursor: pointer;
@@ -706,21 +693,8 @@ img {
 .form__input:not(:-moz-placeholder-shown) ~ .form__label {
   animation: label-anim-up 1200ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
-.form__input:not(:-ms-input-placeholder) ~ .form__label {
-  animation: label-anim-up 1200ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
-}
 .form__field:focus-within > .form__label, .form__input:not(:placeholder-shown) ~ .form__label {
-  -webkit-animation: label-anim-up 1200ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
-          animation: label-anim-up 1200ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
-}
-
-@-webkit-keyframes label-anim-up {
-  60% {
-    transform: translateY(-38px);
-  }
-  100% {
-    transform: translateY(-38px) translateX(-42px);
-  }
+  animation: label-anim-up 1200ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
 @keyframes label-anim-up {
@@ -729,14 +703,6 @@ img {
   }
   100% {
     transform: translateY(-38px) translateX(-42px);
-  }
-}
-@-webkit-keyframes label-anim-down {
-  0% {
-    transform: translateY(-38px) translateX(-42px);
-  }
-  60% {
-    transform: translateY(-38px);
   }
 }
 @keyframes label-anim-down {
@@ -772,12 +738,6 @@ img {
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form-area__text::-moz-placeholder {
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.01em;
-  color: rgba(117, 117, 117, 0.5);
-}
-.form-area__text:-ms-input-placeholder {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
@@ -956,7 +916,7 @@ img {
 
 @media screen and (max-width: 767px) {
   .contact,
-.menu__list {
+  .menu__list {
     display: none;
   }
   .particular__subtitle {
@@ -1134,7 +1094,7 @@ img {
 @media screen and (min-width: 1200px) {
   .modal {
     width: 528px;
-    min-height: 581px;
+    max-width: 100%;
   }
 }
 @media screen and (min-width: 1200px) {

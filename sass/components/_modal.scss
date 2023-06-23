@@ -2,10 +2,11 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scaleY(1);
+  transform: translate(-50%, -50%) scaleY(0.1);
 
-  width: 450px;
-  min-height: 609px;
+  width: calc(100% - 30px);
+  max-width: 450px;
+
   padding: 40px;
 
   background-color: #ffffff;
@@ -25,9 +26,7 @@
     text-align: center;
   }
 }
-.backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scaleY(0);
-}
+
 .modal {
   &__btn {
     display: inline-flex;
@@ -55,4 +54,8 @@
   &__icon {
     fill: currentColor;
   }
+}
+
+body.show-modal .modal {
+  transform: translate(-50%, -50%) scaleY(1);
 }

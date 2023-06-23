@@ -179,7 +179,7 @@
   }
   .modal {
     width: 528px;
-    min-height: 581px;
+    max-width: 100%;
   }
   .form-agreement {
     &__label {
